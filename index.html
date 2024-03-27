@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</head>
+
+<body>
+    <div class="contenedor">
+        <img src="img/logo.png" alt="logo" class="logo">
+
+        <div class="encriptar">
+            <textarea class="texto-encriptado" id="texto" cols="30" rows="10" placeholder="Ingresa el texto aquí" oninput="convertirAMinusculas()"></textarea>
+            <div class="terminos">
+                <p><img src="/img/i.png" class="terminos-imagen">Solo letras minúsculas y sin acentos.</p>
+            </div>
+            <div class="botones">
+                <button class="botonEncriptar" onclick="encriptar()">Encriptar</button>
+                <button class="botonDesencriptar" onclick="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <div class="encriptado">
+            <img src="img/muñeco.png" alt="muñeco" id="muñeco">       
+            <div class="mensaje-encriptado">
+                <h2 id="titulo-mensaje">Ningún mensaje fue encontrado</h2>
+                <p id="parrafo">Ingresa el texto que deseas encriptar o desencriptar</p>
+                <textarea class="textarea-derecha" id="textoCifrado" cols="30" rows="10"></textarea>
+                <div class="btn-copiar">
+                    <button class="botonCopiar" onclick="copiarTexto()">Copiar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="pie-de-pagina">
+        <p class="parrafo-footer">Desarrollado por Arturo Juárez</p>
+        <div class="enlaces-footer">
+            <a href="https://www.linkedin.com/in/iarturojuarez" target="_blank"><img src="img/linkedin.png" alt="linkedin"></a>
+            <a href="https://github.com/arojuarez-hub" target="_blank"><img src="img/github.png" alt="github"></a>
+        </div>
+    </footer>
+
+</body>
+
+<script src="script.js"></script>
+
+</html>
